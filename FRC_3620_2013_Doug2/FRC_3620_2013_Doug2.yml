@@ -1,7 +1,7 @@
 Version 0.0.2
 
 ---
-Name: FRC_3620_2013_Doug2
+Name: FRC 3620 2013 Doug2
 Base: Robot
 Children:
 - Name: Subsystems
@@ -52,7 +52,7 @@ Properties:
   Autonomous Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
     name: Autonomous Command, type: Command, validators: null, value: Autonomous Command}
   Wiring File: !!robotbuilder.data.properties.FileProperty {default: '', extension: html,
-    folder: false, name: Wiring File, validators: null, value: ..\Wiring.html}
+    folder: false, name: Wiring File, validators: null, value: Wiring.html}
   C++ Windriver Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Windriver\workspace',
     extension: null, folder: true, name: C++ Windriver Workspace, validators: null,
     value: 'C:\Windriver\workspace'}
@@ -68,4 +68,4 @@ Properties:
     name: Export Commands, validators: null, value: true}
   Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\wegscd\NetBeansProjects',
     extension: null, folder: true, name: Java Project Directory, validators: null,
-    value: ..\..\}
+    value: .\}
