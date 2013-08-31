@@ -6,7 +6,13 @@ Base: Robot
 Children:
 - Name: Subsystems
   Base: Subsystems
-  Children: []
+  Children:
+  - Name: MonitoringSubsystem
+    Base: Subsystem
+    Children: []
+    Properties:
+      Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Default Command, type: Command, validators: null, value: MonitorCommand}
   Properties: {}
 - Name: Operator Interface
   Base: OI
@@ -33,6 +39,14 @@ Children:
         name: Requires, type: Subsystem, validators: null, value: None}
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: true}
+  - Name: MonitorCommand
+    Base: Command
+    Children: []
+    Properties:
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: MonitoringSubsystem}
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
   Properties: {}
 Properties:
   Autonomous Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
@@ -54,4 +68,4 @@ Properties:
     name: Export Commands, validators: null, value: true}
   Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\wegscd\NetBeansProjects',
     extension: null, folder: true, name: Java Project Directory, validators: null,
-    value: ..\}
+    value: ..\..\}
